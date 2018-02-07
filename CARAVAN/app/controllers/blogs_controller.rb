@@ -1,10 +1,11 @@
 class BlogsController < ApplicationController
-  def index
-    # 記事を全件取得
-    @blog = Blog.all
+  def show
+    @blog = Blog.find(params[:id])
   end
 
-  def show
+  def index
+    # 記事を全件取得
+    @blogs = Blog.all
   end
 
   def new
@@ -21,9 +22,9 @@ class BlogsController < ApplicationController
   end
 
   private
-    def blog_params
-      params.require(:blog).permit(:title, :category, :body)
-    end
+  def blog_params
+    params.require(:blog).permit(:title, :category, :body)
+  end
 
 
 end
