@@ -23,10 +23,8 @@ class BooksController < ApplicationController
     book = Book.new(book_params)
     #DBへ保存する
     book.save
-    #新規投稿画面へリダイレクト
-    #redirect_to '/books/new'
-    redirect_to new_book_path #名前付きルートに変更
-
+    redirect_to book_path(book.id), notice: "投稿しました"
+    #flash[:notice] = "投稿しました"
   end
 
   def update
@@ -34,6 +32,12 @@ class BooksController < ApplicationController
     book.update(book_params)
     #redirect_to '/books/#{book.id}'
     redirect_to book_path(book.id) #名前付きルートに変更
+  end
+
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to new_book_path
   end
 
   private
