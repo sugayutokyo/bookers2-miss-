@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+.top-page,.list-table,.new-form,.edit {
+  margin-left: 30px;
+}
+
+.show {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.show-contetnts {
+  margin-left: 50px;
+}
+
+.flash {
+  margin-left: 50px;
+  margin-top: 20px;
+  color: green;
+}
+
+a:link {
+color: black;
+}
+
+a:visited {
+color: gray;
+}

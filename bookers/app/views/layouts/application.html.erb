@@ -10,7 +10,8 @@
 
 <body>
   <!-- フラッシュメッセージを表示できるようにする-->
-  <%= flash[:message] %>
+  <div class = "flash"><%= flash[:message] %></div>
+  
   <%= yield %>
 </body>
 </html>
