@@ -16,3 +16,23 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-extends {
+  border-radius: 0;
+}
+
+.navbar-header-extends {
+  pointer-events: none;
+  padding-left: 20%;
+}
+
+.navbar-brand-extends:link {color: white;} 
+.navbar-brand-extends:visited {color: white;}
+
+.navbar-right {
+  padding-right: 20%;
+}
+
+.contents {
+  margin: 0 20% 0 20%;
+}
