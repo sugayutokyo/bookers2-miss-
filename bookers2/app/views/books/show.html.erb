@@ -1,2 +1,43 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<nav class="navbar navbar-inverse navbar-extends">
+  <div class="container-fluid">
+    <div class="navbar-header navbar-header-extends">
+      <a class="navbar-brand navbar-brand-extends " href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Bookers</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Users</a></li> 
+      <li><a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Books</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>logout</a></li> 
+    </ul>
+  </div>
+</nav>
+
+<div class = "contents">
+  <div class=" col-lg-4">
+    <div>
+      <h3> User info</h3>
+    </div>
+
+    <div>
+      <h3> New Book</h3>
+      <p> Title</p>
+      <p> Opinion</p>
+    </div>
+  </div>
+  
+
+  <div class="col-lg-8">
+    <h3>Book detail</h3>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>ユーザー画像</td>
+          <td><%= @book.title %></td>
+          <td><%= @book.opinion %></td>
+          <td>Editボタン</td>
+          <td>Destroyボタン</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
