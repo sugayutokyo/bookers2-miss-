@@ -1,2 +1,23 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<nav class="navbar navbar-inverse navbar-extends">
+  <div class="container-fluid">
+    <div class="navbar-header navbar-header-extends">
+      <a class="navbar-brand navbar-brand-extends " href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Bookers</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Users</a></li> 
+      <li><a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Books</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>logout</a></li> 
+    </ul>
+  </div>
+</nav>
+
+<div class="contents">
+  <%= form_for(@user) do |f| %>
+  <h2> User info</h2>
+  <h4>Name <%= f.text_field :name %></h4>
+  <h4>Image</h4>
+  <h4>Introduction</h4>
+  <% end %>
+</div>
+

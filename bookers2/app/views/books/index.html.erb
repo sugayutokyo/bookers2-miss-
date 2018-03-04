@@ -15,7 +15,6 @@
 
 <div class = "contents">
   <div class=" col-lg-4">
-    <div>
       <h3> User info</h3>
       <p>画像</p>
       <table class="table">
@@ -27,9 +26,11 @@
           <td>introduction</td>
           <td>テスト</td>
         </tr>
-
       </table>
-    </div>
+        
+      <%= link_to user_path(@user.id) do %>
+      <div class="btn btn-default btn-block" role="button"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> </div>
+      <% end %>
 
     <h3> New Book</h3>
     <!-- form_for部分 -->
@@ -41,7 +42,7 @@
     <%= f.submit 'Create Book', class: "btn btn-primary btn-block" %>
     <% end %>
   </div>
-  
+
   <div class="col-lg-8">
     <h3> Books</h3>
     <table class="table">
