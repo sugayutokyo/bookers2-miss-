@@ -1,4 +1,4 @@
 class Book < ApplicationRecord
-  validates :opinion, length: { in: 1..100 }
+  validates :opinion, length: { maximum: 200 } 
   belongs_to :user
 end
