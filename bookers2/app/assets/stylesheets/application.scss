@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.welcome {
+  margin: 0 30% 0 30%;
+}
+
 .navbar-extends {
   border-radius: 0;
 }
@@ -28,6 +32,10 @@
 
 .navbar-brand-extends:link {color: white;} 
 .navbar-brand-extends:visited {color: white;}
+
+.login-text, .signup-text {
+  color: #4a4a4a;
+}
 
 .navbar-right {
   padding-right: 20%;

@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   get '/books/total' => 'books#total', as: 'books_total'
   get '/books/welcome' => 'books#welcome', as: 'books_welcome'
-  
+  get '/books/about' => 'books#about', as: 'books_about'
+  get '/users/:id' => 'users#view', as: 'user_view'
+
+  resources :users, only: [:edit, :update, :index]
   resources :books
-  resources :users, only: [:show, :edit, :update, :index]
 
   root 'books#index'
   

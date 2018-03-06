@@ -1,14 +1,6 @@
 <div class = "contents">
   <div class=" col-lg-4">
-    <div>
-      <h3> User info</h3>
-    </div>
-
-    <div>
-      <h3> New Book</h3>
-      <p> Title</p>
-      <p> Opinion</p>
-    </div>
+    <%= render 'books/list',user: @user,book: @book %>
   </div>
   
 
@@ -27,7 +19,9 @@
           <tr>
           <td><%= attachment_image_tag user, :profile_image, :fill,60,60 %></td>
           <td><%= user.name %></td>
-          <td>Show</td>
+          <td>
+            <%= link_to "Show", user_view_path(user) %>
+          </td>
           </tr>
           <% end %>
       </tbody>

@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :show, :create, :total, :edit, :destroy]
   def new
-
   end
 
   def welcome
@@ -32,12 +32,27 @@ class BooksController < ApplicationController
   end
 
   def edit
+    @book = Book.find(params[:id])
+    if @book.user == current_user
+    else
+      # /book/id/editを打ってもログインユーザーと一致していない限りedit画面には飛べないでedit画面に戻されてしまう
+      redirect_to book_path(@book)
+    end
   end
 
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
     redirect_to books_total_path
+  end
+
+  def update
+    book = Book.find(params[:id])
+    book.update(book_params)
+    redirect_to book_path(book)
+  end
+
+  def about
   end
 
   private

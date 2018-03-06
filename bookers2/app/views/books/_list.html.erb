@@ -10,7 +10,7 @@
     <td><%= user.introduction %></td>
   </tr>
 </table>
-<%= link_to user_path(user.id) do %>
+<%= link_to edit_user_path(user.id) do %>
 <div class="btn btn-default btn-block" role="button"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> </div>
 <% end %>
 

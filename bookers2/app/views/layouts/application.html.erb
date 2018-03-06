@@ -37,10 +37,26 @@
           <% end %>
         </li>
         <% else %>
-        <li>Top</li>
-        <li>About</li>
-        <li>Sign Up</li>
-        <li>login</li>
+        <li>
+          <%= link_to books_welcome_path do%>
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
+          <% end %>
+        </li>
+        <li>
+          <%= link_to books_about_path do%>
+          <span class="glyphicon glyphicon-link" aria-hidden="true"></span>About
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_registration_path do%>
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Sign Up
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_session_path do%>
+          <span class="glyphicon glyphicon-share" aria-hidden="true"></span>login
+          <% end %>
+        </li>
         <% end %>
       </ul>
       </div>
