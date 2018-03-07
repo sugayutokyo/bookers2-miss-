@@ -1,5 +1,5 @@
 <h3> User info</h3>
-<p> <%= attachment_image_tag user, :profile_image, :fill,60,60 %></p>
+<p> <%= attachment_image_tag user, :profile_image, :fill,60,60, class: "user-image", fallback: "no_image.jpg" %></p>
 <table class="table">
   <tr>
     <td>name</td>
@@ -18,8 +18,8 @@
 <!-- form_for部分 -->
 <%= form_for(book) do |f|  %>
 <h4>Title</h4>
-<%= f.text_field :title %>
+<%= f.text_field :title, class: "new-book-form" %>
 <h4>Opinion</h4>
-<%= f.text_area :opinion %>
+<%= f.text_area :opinion, class: "new-book-form" %>
 <%= f.submit 'Create Book', class: "btn btn-primary btn-block" %>
 <% end %>

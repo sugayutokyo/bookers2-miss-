@@ -1,10 +1,13 @@
-<div class = "contents">
+<div class = "contents clearfix">
   <%= form_for(@book) do |f| %>
-    <h4>Editting Book</h4>
+
+    <h2>Editting Book</h2> 
     <h4>Title</h4>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "edit-form" %>
     <h4>Opinion</h4>
-    <h4><%= f.text_area :opinion %></h4>
-    <%= f.submit "Update Book" %>
+    <h4><%= f.text_area :opinion, class: "edit-form" %></h4>
+    <%= f.submit "Update Book", class: "btn btn-primary btn-block" %>
   <% end %>
+  <br>
+  <%= link_to 'Show ', book_path(@book) %>|<%= link_to ' Back', books_total_path %>
 </div>

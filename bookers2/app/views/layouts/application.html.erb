@@ -59,8 +59,17 @@
         </li>
         <% end %>
       </ul>
-      </div>
+    </div>
   </nav>
+  <!--  フラッシュメッセージ -->
+  <div class="flash">
+    <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "#{key}") %>
+    <% end %>
+  </div>
   <%= yield %>
+  <footer>
+    CopyRight Infratop.inc
+  </footer>
 </body>
-  </html>
+</html>

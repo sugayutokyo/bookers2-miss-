@@ -13,8 +13,10 @@ class BooksController < ApplicationController
   end
 
   def show
+    @newbook = Book.new
     @book = Book.find(params[:id])
     @user = current_user
+    @nowuser = @book.user
   end
 
   def create
@@ -38,6 +40,7 @@ class BooksController < ApplicationController
       # /book/id/editを打ってもログインユーザーと一致していない限りedit画面には飛べないでedit画面に戻されてしまう
       redirect_to book_path(@book)
     end
+
   end
 
   def destroy
