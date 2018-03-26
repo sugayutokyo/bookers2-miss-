@@ -1,0 +1,10 @@
+<div class="contents clearfix">
+  <%= form_for(@user) do |f| %>
+  <h2> User info</h2>
+  <h4>Name <%= f.text_field :name %></h4>
+  <h4>Image <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %></h4>
+  <h4>Introduction <%= f.text_area :introduction %></h4>
+  <%= f.submit "Update User" %>
+  <% end %>
+</div>
+

@@ -1,0 +1,25 @@
+<h3> User info</h3>
+<p> <%= attachment_image_tag user, :profile_image, :fill,60,60, class: "user-image", fallback: "no_image.jpg" %></p>
+<table class="table">
+  <tr>
+    <td>name</td>
+    <td><%= user.name %></td>
+  </tr>
+  <tr>
+    <td>introduction</td>
+    <td><%= user.introduction %></td>
+  </tr>
+</table>
+<%= link_to edit_user_path(user.id) do %>
+<div class="btn btn-default btn-block" role="button"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> </div>
+<% end %>
+
+<h3> New Book</h3>
+<!-- form_for部分 -->
+<%= form_for(book) do |f|  %>
+<h4>Title</h4>
+<%= f.text_field :title, class: "new-book-form" %>
+<h4>Opinion</h4>
+<%= f.text_area :opinion, class: "new-book-form" %>
+<%= f.submit 'Create Book', class: "btn btn-primary btn-block" %>
+<% end %>

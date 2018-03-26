@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.welcome {
+  margin: 0 30% 0 30%;
+}
+
+.navbar-extends {
+  border-radius: 0;
+}
+
+.navbar-header-extends {
+  pointer-events: none;
+  padding-left: 20%;
+}
+
+.navbar-brand-extends:link {color: white;} 
+.navbar-brand-extends:visited {color: white;}
+
+.login-text, .signup-text {
+  color: #4a4a4a;
+}
+
+.navbar-right {
+  padding-right: 20%;
+}
+
+.contents {
+  margin: 0 20% 0 20%;
+}
+
+.log-in, .sign-up{
+  margin-left: 20%
+}
+
+.edit-form {
+  width: 768px;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.new-book-form {
+  width: 226px;
+}
+
+.actions-expands {
+  padding: 10px 0;
+}
+
+.user-image {
+  width: 60px;
+  height: 60px;
+}
+
+.flash {
+  margin-left: 20%;
+  color: green;
+}
+
+footer {
+  text-align: right;
+  margin-right: 20%;
+}

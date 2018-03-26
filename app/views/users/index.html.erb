@@ -1,0 +1,30 @@
+<div class = "contents clearfix">
+  <div class=" col-lg-4">
+    <%= render 'books/list',user: current_user,book: @book %>
+  </div>
+  
+
+  <div class="col-lg-8">
+    <h3>Users</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <td>image</td>
+          <td>name</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody>
+          <% @users.each do |user| %>
+          <tr>
+          <td><%= attachment_image_tag user, :profile_image, :fill , 60, 60, class: "user-image", fallback: "no_image.jpg"%></td>
+          <td><%= user.name %></td>
+          <td>
+            <%= link_to "Show", user_view_path(user) %>
+          </td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
